@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action = "{% url 'create' %}">
+        <div>이름<br/><input type="text" name="name" value=""></div>
+        <div>입금<br/><input type="text" name="deposit" value=""></div>
+        <div>출금<br/><input type="text" name="withdraw" value=""></div>
+        <div><input type="submit" value="Submit"></div>
+    </form>
+
+    <a href="{% url 'sums' %}">총계확인하기</a>
+</body>
+</html>
