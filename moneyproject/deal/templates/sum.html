@@ -5,15 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+    .box1 {
+        border: 2px;
+    }
+    </style>
 </head>
 <body>
     <h1>여기에서 이태까지 입.출금 내역을 확인 하실 수 있습니다.</h1>
-    <div>
-        {{a = 0}}
-        {% for k in moneys.all %}   
-            {{b = k.deposit + k.withdraw}}
-            {{b}}
-        {% endfor %}
+    <div style="border: 1px solid gold; float: left; width: 20%;">
+       <tabel>
+           <th>이름<br></th>
+           <tr>
+               <td>
+                {% for k in moneys.all %}   
+                {{k.name}}
+                <br>
+                {% endfor %}
+                </td>
+            </tr>
+       
+        </tabel>
+    </div>
+
+    <div style="border: 1px solid red; float: left; width: 20%;">
+            <tabel>
+                <th>입금<br></th>
+                <tr>
+                    <td>
+                     {% for k in moneys.all %}   
+                     {{k.deposit}}
+                     <br>
+                     {% endfor %}
+                     </td>
+                 </tr>
+            
+             </tabel>
+    </div>
+
+    <div style="border: 1px solid blue; float: left; width: 20%;">
+            <tabel>
+                <th>출금</th><br></th>
+                <tr>
+                    <td>
+                     {% for k in moneys.all %}   
+                     {{k.withdraw}}
+                     <br>
+                     {% endfor %}
+                     </td>
+                 </tr>
+            
+             </tabel>
+    </div>
+
+    <div style="border: 1px solid blue; float: left; width: 20%;">
+            <tabel>
+                <th>날짜</th><br></th>
+                <tr>
+                    <td>
+                     {% for k in moneys.all %}   
+                     {{k.input_date}}
+                     <br>
+                     {% endfor %}
+                     </td>
+                 </tr>
+            
+             </tabel>
+    </div>
+
+    <div style="border: 1px solid blue; float: left; width: 20%;">
+            <tabel>
+                <th>총계</th><br></th>
+                <tr>
+                    <td>
+                     {% for k in moneys.all %}
+                     {{k.deposit | minus: k.withdraw}}
+                     <br>
+                     {% endfor %}
+                     </td>
+                 </tr>
+            
+             </tabel>
     </div>
 
 </body>
