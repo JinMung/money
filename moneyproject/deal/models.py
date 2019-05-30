@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 # Create your models here.
 
@@ -8,6 +9,8 @@ class Money(models.Model):
     name = models.CharField(max_length = 5) #choices = memeber)
     deposit = models.IntegerField(default = 0)
     withdraw = models.IntegerField(default = 0)
+    input_date = models.DateTimeField(default = None)
+
 
 
     def __str__(self):

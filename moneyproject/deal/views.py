@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Money
+from django.utils.timezone import now
 # Create your views here.
 
 def all_money(request):    
@@ -10,6 +11,7 @@ def create(request):
     money.name = request.GET['name']
     money.deposit = request.GET['deposit']
     money.withdraw = request.GET['withdraw']
+    money.input_date = request.GET['input_date']
     money.save()
     
     #moneys = Money.objects.all()
