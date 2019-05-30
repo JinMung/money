@@ -8,9 +8,19 @@
 </head>
 <body>
     <form action = "{% url 'create' %}">
-        <div>이름<br/><input type="text" name="name" value=""></div>
-        <div>입금<br/><input type="text" name="deposit" value=""></div>
-        <div>출금<br/><input type="text" name="withdraw" value=""></div>
+        <table>
+            <th>이름</th>
+            <th>입금</th>
+            <th>출금</th>
+            <th>날짜</th>
+            <tr>
+                    <td><input type="text" name="name" value=""></div>
+                    <td><input type="number" name="deposit" value=""></div>
+                    <td><input type="number" name="withdraw" value=""></div>
+                    <td><input type="datetime" name="input_date" value=""></div>
+            </tr>
+        </table>
+        
         <div><input type="submit" value="Submit"></div>
     </form>
 
