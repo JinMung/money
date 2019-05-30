@@ -19,6 +19,11 @@ def create(request):
     return render(request, 'submit.html')
 
 def sums(request):
-    moneys = Money.objects.all()    
+    moneys = Money.objects.all()   
+    # deposit = moneys.deposit
+    # withdraw = moneys.withdraw
+    # a = {}
+    # b = deposit + withdraw
     return render(request, 'sum.html', {'moneys' : moneys})
+    # ,'deposit' : deposit, 'withdraw' : withdra, 'b' : b}
         

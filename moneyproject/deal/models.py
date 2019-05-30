@@ -9,7 +9,7 @@ class Money(models.Model):
     name = models.CharField(max_length = 5) #choices = memeber)
     deposit = models.IntegerField(default = 0)
     withdraw = models.IntegerField(default = 0)
-    input_date = models.DateTimeField(default = None)
+    input_date = models.DateTimeField(default = now)
 
 
 
