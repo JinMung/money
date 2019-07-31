@@ -11,7 +11,5 @@ class Money(models.Model):
     withdraw = models.IntegerField(default = 0)
     input_date = models.DateTimeField(default = now)
 
-
-
     def __str__(self):
         return self.name
